@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 // const uniqueValidator = require('mongoose-unique-validator');
 
 const requestSchema = new mongoose.Schema({
-  rawRequest: String, //to delete
+  // rawRequest: String, //to delete
   headers: Object,
   body: Object,
 }, {timestamps: true});

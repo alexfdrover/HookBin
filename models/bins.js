@@ -25,4 +25,7 @@ binSchema.set('toJSON', {
   }
 });
 
-module.exports = mongoose.model('Bin', binSchema);
+module.exports = {
+  binSchema,
+  Bin: mongoose.model('Bin', binSchema),
+};
