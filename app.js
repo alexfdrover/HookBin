@@ -16,7 +16,7 @@ app.get('/newBin', async (req, res) => {
   const path = newBin._id;
   
   /* TODO
-  return path of bin to user
+  display path of new bin to user
   */
   await insertBin(newBin);
   console.log("New bin can be found at the following path: ", path);
@@ -37,6 +37,22 @@ app.post('/*', async (req, res) => {
   console.log("Request added to bin ", foundBin._id);
 
   res.send("Received, thanks!");
+});
+
+app.get('/*', async (req, res) => {
+  const path = req.url.slice(1);
+  const foundBin = await fetchBin(path);
+  
+  if (!foundBin) {
+    console.log("Bin not found")
+    res.send();
+  }
+
+  const allHooks = foundBin.requests;
+  /* TODO
+  display allHooks to user
+  */
+  res.send();
 });
 
 function createRequest(req) {
