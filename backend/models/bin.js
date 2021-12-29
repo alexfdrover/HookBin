@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { nanoid } = require('nanoid');
 
-const { requestSchema } = require('./requests');
+const { requestSchema } = require('./request');
 
 const generateId = () => {
   return nanoid(6).toLowerCase();
