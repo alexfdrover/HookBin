@@ -1,8 +1,10 @@
-# Repo for RequestBin clone
+# HookBin
 
 ## Purpose
-Hands on practice with locally hosted mongodb and webhooks
+An app that inspects and visualizes Webhook contents. Frontend built in React, Backend in Node with Mongodb as the database.
+
 HOST is localhost when deployed locally
+
 HOST is droplet IP when deployed in prod
 
 Client server on port 3001
