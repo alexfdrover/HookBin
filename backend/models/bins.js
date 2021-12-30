@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { nanoid } = require('nanoid');
 
-const { requestSchema } = require('./request');
+const { requestSchema } = require('./requests');
 
 const generateId = () => {
   return nanoid(6).toLowerCase();
@@ -19,13 +19,10 @@ const binSchema = new mongoose.Schema({
 
 binSchema.set('toJSON', {
   transform: (document, returnedObject) => {
-    returnedObject.path = returnedObject._id;
+    returnedObject.binId = returnedObject._id;
     delete returnedObject._id;
     delete returnedObject.__v;
   }
 });
 
-module.exports = {
-  binSchema,
-  Bin: mongoose.model('Bin', binSchema),
-};
+module.exports = mongoose.model('Bin', binSchema);
