@@ -2,7 +2,6 @@
 
 A locally hosted full-stack web application for inspecting and visualizing HTTP, REST API and Webhook requests.
 
-
 #### To Start
 1. Clone repository onto your local machine
 2. Navigate to the "backend" folder
